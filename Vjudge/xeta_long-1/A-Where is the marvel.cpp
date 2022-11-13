@@ -2,7 +2,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-typedef long long LL;
 int main()
 {
     int N,Q,cas=0;
@@ -19,15 +18,15 @@ int main()
         }
         sort(str, str+N);
         while(Q--){
-            int que, ans;
+            int que, answer;
             cin>>que;
-            ans = lower_bound(str,str+N, que)-str;
-            if (str[ans]==que){
-                printf("%d found at %d\n", que, ans+1);
+            answer = lower_bound(str,str+N, que)-str;
+            if (str[answer]==que){
+               cout<<que<<" found at "<<answer+1<<endl;
 
             }
             else{
-                printf("%d not found\n", que);
+                cout<<que<<" not found"<<endl;
             }
         }
     }
